@@ -1,0 +1,25 @@
+[
+	{
+		"description":"模拟 重定向",
+		"request":{
+			"uri":"/redirect"
+		},
+		"redirectTo":"http://www.baidu.com"
+	},
+	{
+		"description":"模拟 重定向到自己网页",
+		"request":{
+			"uri":"/redirec/topath"
+		},
+		"redirectTo":"/redirect/new"
+	},
+	{
+		"description":"模拟 被重定向到的自己的网页",
+		"request":{
+			"uri":"/redirect/new"
+		},
+		"response":{
+			"text":"重定向成功了！！！"
+		}
+	}
+]

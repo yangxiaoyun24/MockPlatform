@@ -1,0 +1,143 @@
+[
+	{
+		"description":"简单的mock例子",
+		"request":{
+			"uri":"/demo"
+		},
+		"response":{
+			"text":"mock demo返回了！！！"
+		}
+	},
+	{
+		"description":"模拟 没有参数 的get请求",
+		"request":{
+			"uri":"/get/without/param",
+			"method":"get"
+		},
+		"response":{
+			"text":"模拟 没有参数 的get请求 ===> 返回了！！！"
+		}
+	},
+	{
+		"description":"模拟 带参数 的get请求",
+		"request":{
+			"uri":"/get/with/param",
+			"method":"get",
+			"queries":{
+				"name":"ulsum",
+				"age":"18"
+			}
+		},
+		"response":{
+			"text":"模拟 带参数 的get请求 ===> 返回了！！！"
+		}
+	},
+	{
+		"description":"模拟 带参数 带header 带cookies 的get请求",
+		"request":{
+			"uri":"/get/with/paramandcookiesandheader",
+			"method":"get",
+			"cookies":{
+				"login":"true"
+			},
+			"headers":{
+				"Connection":"Keep-Alive"
+			},
+			"queries":{
+				"name":"ulsum",
+				"age":"18"
+			}
+		},
+		"response":{
+			"text":"模拟 带参数 带header 带cookies 的get请求 ===> 返回了！！！"
+		}
+	},
+	{
+		"description":"模拟 没有参数 的post请求",
+		"request":{
+			"uri":"/post/without/param",
+			"method":"post"
+		},
+		"response":{
+			"text":"模拟 没有参数 的post请求 ===> 返回了！！！"
+		}
+	},
+	{
+		"description":"模拟 带参数 的post请求",
+		"request":{
+			"uri":"/post/with/param",
+			"method":"post",
+			"forms":{
+				"name":"ulsum",
+				"age":"18"
+			}
+		},
+		"response":{
+			"text":"模拟 带参数 的post请求 ===> 返回了！！！"
+		}
+	},
+	{
+		"description":"模拟 带参数 带cookies 的post请求",
+		"request":{
+			"uri":"/post/with/paramandcookies/forms",
+			"method":"post",
+			"cookies":{
+				"login":"true"
+			},
+			"forms":{
+				"name":"ulsum",
+				"age":"18"
+			}
+		},
+		"response":{
+			"text":"模拟 带参数 带cookie 的post请求 ===> 返回了！！！"
+		}
+	},
+	{
+		"description":"模拟 带参数 带header 带cookies 的post请求",
+		"request":{
+			"uri":"/post/with/paramandcookiesandheader/json",
+			"method":"post",
+			"cookies":{
+				"login":"true"
+			},
+			"headers":{
+				"content-type":"application/json"
+			},
+			"json":{
+				"name":"ulsum",
+				"age":"18"
+			}
+		},
+		"response":{
+			"status":200,
+			"json":{
+				"status":"1",
+				"result":"模拟 带参数 带header 带cookies 的post请求 ===> 返回了！！！"
+			}
+		}
+	},
+	{
+		"description":"模拟 重定向",
+		"request":{
+			"uri":"/redirect"
+		},
+		"redirectTo":"http://www.baidu.com"
+	},
+	{
+		"description":"模拟 重定向到自己网页",
+		"request":{
+			"uri":"/redirec/topath"
+		},
+		"redirectTo":"/redirect/new"
+	},
+	{
+		"description":"模拟 被重定向到的自己的网页",
+		"request":{
+			"uri":"/redirect/new"
+		},
+		"response":{
+			"text":"重定向成功了！！！"
+		}
+	}
+]

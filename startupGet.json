@@ -1,0 +1,46 @@
+[
+	{
+		"description":"模拟 没有参数 的get请求",
+		"request":{
+			"uri":"/get/without/param",
+			"method":"get"
+		},
+		"response":{
+			"text":"模拟 没有参数 的get请求 ===> 返回了！！！"
+		}
+	},
+	{
+		"description":"模拟 带参数 的get请求",
+		"request":{
+			"uri":"/get/with/param",
+			"method":"get",
+			"queries":{
+				"name":"ulsum",
+				"age":"18"
+			}
+		},
+		"response":{
+			"text":"模拟 带参数 的get请求 ===> 返回了！！！"
+		}
+	},
+	{
+		"description":"模拟 带参数 带header 带cookies 的get请求",
+		"request":{
+			"uri":"/get/with/paramandcookiesandheader",
+			"method":"get",
+			"cookies":{
+				"login":"true"
+			},
+			"headers":{
+				"Connection":"Keep-Alive"
+			},
+			"queries":{
+				"name":"ulsum",
+				"age":"18"
+			}
+		},
+		"response":{
+			"text":"模拟 带参数 带header 带cookies 的get请求 ===> 返回了！！！"
+		}
+	}
+]
